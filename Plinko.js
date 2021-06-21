@@ -8,6 +8,7 @@ class Plinko {
         this.r = 10;
         this.body = Bodies.circle(x, y, this.r, options);        
         World.add(world, this.body);  
+        this.image = loadImage("iron nail.jpg")
     }
     display() {
 
@@ -22,6 +23,7 @@ class Plinko {
         fill("white");
         ellipseMode(RADIUS);
         ellipse(0,0,this.r,this.r);
+        image(this.image, 0, 0, this.width, this.height);
         pop();
     }
 
